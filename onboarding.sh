@@ -154,12 +154,12 @@ function jamfCommand {
 	fi
 }
 
-###				###
-### Main Script ###
-###				###
+###		###
+### Main Script	###
+###		###
 
 ## These next four lines execute functions above
-coffee 					## Uses 'caffeinate' to disable sleep and stores the PID for later
+coffee				## Uses 'caffeinate' to disable sleep and stores the PID for later
 pauseJamfFramework 		## Disables recurring Jamf check-ins to prevent overlaps
 waitForUser 			## Blocking loop; Waits until DEP is complete and user is logged in
 startDEPNotify 			## Initial setup and execution of DEPNotify as user
