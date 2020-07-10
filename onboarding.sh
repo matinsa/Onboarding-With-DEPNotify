@@ -154,15 +154,15 @@ function jamfCommand {
 	fi
 }
 
-###             ###
+###				###
 ### Main Script ###
-###             ###
+###				###
 
 ## These next four lines execute functions above
-coffee ## Uses 'caffeinate' to disable sleep and stores the PID for later
-pauseJamfFramework ## Disables recurring Jamf check-ins to prevent overlaps
-waitForUser ## Blocking loop; Waits until DEP is complete and user is logged in
-startDEPNotify ## Initial setup and execution of DEPNotify as user
+coffee 					## Uses 'caffeinate' to disable sleep and stores the PID for later
+pauseJamfFramework 		## Disables recurring Jamf check-ins to prevent overlaps
+waitForUser 			## Blocking loop; Waits until DEP is complete and user is logged in
+startDEPNotify 			## Initial setup and execution of DEPNotify as user
 
 ###                      ###
 ### YOUR STUFF GOES HERE ###
@@ -185,7 +185,7 @@ startDEPNotify ## Initial setup and execution of DEPNotify as user
 ## Machine Configuration
 DEPNotify "Command: MainText: Configuring Machine."
 DEPNotify "Status: Setting Computer Name"
-jamfCommand renameComputer
+jamfCommand configureComputer
 
 ## Installers required for every Mac - Runs policies with 'deploy' manual trigger
 DEPNotify "Status: Starting Deployment"
